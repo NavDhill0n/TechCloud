@@ -1,0 +1,241 @@
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%vw;
+  background: #000000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav{
+    background-color: #000000;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -110%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+   
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+/* below navigation */
+
+
+
+.heading h2 {
+   
+    text-align: center;
+    /* font-family: 'Monoton', cursive;
+    font-size: 30px;
+    font-weight: 300; */
+    /* position: absolute; */
+
+
+}
+
+.second-heading {
+    /* position: relative; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 45px;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100vw;
+    /* background-color: #fff; */
+}
+
+.alist {
+    list-style: none;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 100px;
+/* background-color: white; */
+    justify-content: space-between;
+    /* padding: 0px 50px 0px 50px; */
+
+}
+
+.alist li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: black;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.alist li:hover {
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.alist li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.alist li a:hover {
+    color: rgb(91, 178, 210);
+}
+
+
+.description {
+    /* display: block; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-left: 150px;
+    width: 60vw;
+    justify-content: center;
+   font-size: 1.25rem;
+    word-spacing: 3px;
+    /* background-color: #fff; */
+   
+}
+
+/* .description p{
+    background-color: #fff;
+} */
+/* table css */
+
+.table2 h1{
+    color: rgb(0, 0, 0);
+    /* background-color: rgb(14, 13, 13); */
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2.5rem;
+
+}
+.table2{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.table2 table{
+    border: solid  rgb(0, 0, 0);
+    border-collapse: collapse;
+    height: 500px;
+    width: 70vw;
+    justify-items: center;
+    padding: auto;
+    margin: 25px auto;
+   font-size: 1rem;
+   text-align: center;
+}
+
+.table2 table a{
+    text-decoration: none;
+    color: coral ;
+    font-weight: 500;
+
+}
+
+
+
+.footer{
+  background-color: black;
+  color: white;
+ height: 50px;
+}
